@@ -29,3 +29,10 @@ CREATE TABLE 系统设置
  下班时间 time(0),
  加班时间 time(0))
 select*from 系统设置
+--请假
+CREATE TABLE 请假
+(员工编号 int foreign key references 员工(员工编号),
+ 开始日期 date,
+ 结束日期 date,
+ 状态 nchar(30) default('已批准'))
+select*from 请假
