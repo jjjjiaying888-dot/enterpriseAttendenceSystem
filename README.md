@@ -3,13 +3,13 @@ This project is an enterprise attendance and clock-in management system based on
 It was developed as a course project by a sophomore majoring in Software Engineering.
 
 ## Features
-- Department and employee management
-- Clock-in / clock-out attendance records
-- Automatic daily attendance generation using triggers
-- Late arrival, absence, and absenteeism detection
-- Leave management
-- Overtime calculation
-- Monthly and weekly statistics by employee and department
+1.Department and employee management
+2.Clock-in / clock-out attendance records
+3.Automatic daily attendance generation using triggers
+4.Late arrival, absence, and absenteeism detection
+5.Leave management
+6.Overtime calculation
+7.Monthly and weekly statistics by employee and department
 
 ## Project Structure
 SQL/
@@ -22,9 +22,9 @@ SQL/
 07_demo_queries.sql      -- Demo queries and usage examples
 
 ## How to Run
-1. Execute scripts in order from 01 to 07 in SQL Server
-2. Ensure file paths in '01_create_database.sql' match your local environment
-3. Run demo queries to view attendance results
+1.Execute scripts in order from 01 to 07 in SQL Server
+2.Ensure file paths in '01_create_database.sql' match your local environment
+3.Run demo queries to view attendance results
 
 ## Notes
 This is the author's first GitHub repository.
