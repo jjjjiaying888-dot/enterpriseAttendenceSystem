@@ -53,3 +53,9 @@ CREATE TABLE 每日考勤
  是否早退 nchar(30) default('否') check(是否早退 in ('是','否')),
  加班分钟 int default(0))
  select*from 每日考勤
+--缺勤通报
+CREATE TABLE 缺勤通报
+(员工编号 int foreign key references 员工(员工编号),
+ 考勤日期 date,
+ 通报原因 nchar(30) check(通报原因 in ('缺勤','旷工')))
+ select*from 缺勤通报
