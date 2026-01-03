@@ -43,3 +43,13 @@ CREATE TABLE 考勤打卡
  打卡类型 nchar(30) check (打卡类型 in('上班','下班')),
  打卡时间 time(0))
 select*from 考勤打卡
+--每日考勤
+CREATE TABLE 每日考勤
+(员工编号 int foreign key references 员工(员工编号),
+ 考勤日期 date,
+ 上班打卡 time(0),
+ 下班打卡 time(0),
+ 上班判定 nchar(30) default('正常') check(上班判定 in ('正常','迟到','旷工','缺勤','请假')),
+ 是否早退 nchar(30) default('否') check(是否早退 in ('是','否')),
+ 加班分钟 int default(0))
+ select*from 每日考勤
