@@ -36,3 +36,10 @@ CREATE TABLE 请假
  结束日期 date,
  状态 nchar(30) default('已批准'))
 select*from 请假
+--考勤打卡
+CREATE TABLE 考勤打卡
+(员工编号 int foreign key references 员工(员工编号),
+ 考勤日期 date,
+ 打卡类型 nchar(30) check (打卡类型 in('上班','下班')),
+ 打卡时间 time(0))
+select*from 考勤打卡
